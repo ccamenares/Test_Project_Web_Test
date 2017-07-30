@@ -22,14 +22,17 @@ public class MyFirstTest extends Test {
 		String title = driver.getTitle();
 		
 		if  (title.contains("Google")) {
-
+			// Assert success for the entire test 
+			return ExecutionResultType.Passed;
 			}
 		else {
 			// Setting the general test failure  message
 			this.setMessage(String.format("Actual title is: %s",  title));
+			
+			// Assert failure for the entire test
+			return ExecutionResultType.Failed;
+
 			}
-		
-		return null;
 	}
 
 }
