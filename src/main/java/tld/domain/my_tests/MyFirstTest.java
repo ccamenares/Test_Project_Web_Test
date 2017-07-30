@@ -15,6 +15,12 @@ public class MyFirstTest extends Test {
 		// No need to specify browser type, it can be done later via UI
 		WebDriver  driver  =  this.getWebDriver();
 		
+		// Navigate to Google
+		driver.navigate().to("https://www.google.com/ncr");
+		
+		// Retrieve page title
+		String title = driver.getTitle();
+		
 		return null;
 	}
 
