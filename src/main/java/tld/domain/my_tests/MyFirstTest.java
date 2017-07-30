@@ -21,6 +21,14 @@ public class MyFirstTest extends Test {
 		// Retrieve page title
 		String title = driver.getTitle();
 		
+		if  (title.contains("Google")) {
+
+			}
+		else {
+			// Setting the general test failure  message
+			this.setMessage(String.format("Actual title is: %s",  title));
+			}
+		
 		return null;
 	}
 
